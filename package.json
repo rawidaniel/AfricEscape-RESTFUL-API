@@ -2,12 +2,13 @@
   "name": "africescape",
   "version": "1.0.0",
   "engines": {
-    "node": ">=10.6.0"
+    "node": "^16"
   },
   "description": "Learning node, express and mongoDB",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "start:dev": "nodemon server.js",
     "start:prod": "SET NODE_ENV=production&& nodemon server.js",
     "debug": "ndb server.js"
   },

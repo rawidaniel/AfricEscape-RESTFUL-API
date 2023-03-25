@@ -6,6 +6,13 @@ const router = express.Router();
 
 router.use(authController.protect);
 
+router.route('/myBooking').get(bookingController.getMyBooking);
+router.post(
+  '/:tourId/myBooking',
+  bookingController.setUsersAndToursIdAndPrice,
+  bookingController.createMyBooking
+);
+
 router.use(authController.restrictTo('admin', 'lead-guide'));
 
 router

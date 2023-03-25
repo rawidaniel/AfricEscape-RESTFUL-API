@@ -5,6 +5,8 @@ const ApiFeature = require('../utils/apiFeatures');
 exports.getAll = (Model) =>
   catchAsync(async (req, res, next) => {
     let filter = {};
+    if (req.originalUrl.endsWith('/users/reviews'))
+      filter = { user: req.user.id };
     if (req.params.tourId) filter = { tour: req.params.tourId };
     const feature = new ApiFeature(Model.find(filter), req.query)
       .filter()

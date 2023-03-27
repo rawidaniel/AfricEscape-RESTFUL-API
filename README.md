@@ -60,6 +60,16 @@ You must configure the variables in Postman based on your environment(developmen
 
 Check out [AfricEscape API Documentaion](https://documenter.getpostman.com/view/26057175/2s93RQTDxC) for more information.
 
+#### API Features
+
+Tours 👉 [https://africescape-api.onrender.com/api/v1/tours](https://africescape-api.onrender.com/api/v1/tours)
+
+Users 👉 [https://africescape-api.onrender.com/api/v1/users](https://africescape-api.onrender.com/api/v1/users)
+
+Reviews 👉 [https://africescape-api.onrender.com/api/v1/reviews](https://africescape-api.onrender.com/api/v1/reviews)
+
+Bookings 👉 [https://africescape-api.onrender.com/api/v1/bookings](https://africescape-api.onrender.com/api/v1/bookings)
+
 ### Technologies Used
 
 ---

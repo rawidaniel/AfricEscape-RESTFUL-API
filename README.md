@@ -56,7 +56,9 @@ You must configure the variables in Postman based on your environment(developmen
 - {{password}} with your user password as value.
 ```
 
-Check out [AfricEscape API Documentaion](https://documenter.getpostman.com/view/26057175/2s93JuuNpR) fro more information.
+Check out <a href="https://documenter.getpostman.com/view/26057175/2s93RQTDxC" target="_blank">AfricEscape API Documentaion</a> for more information.
+
+<!-- Check out [AfricEscape API Documentaion](https://documenter.getpostman.com/view/26057175/2s93RQTDxC) for more information. -->
 
 ### Technologies Used
 

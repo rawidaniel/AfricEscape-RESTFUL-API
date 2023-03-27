@@ -35,13 +35,14 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // Limit request from the same Ip
-const limiter = rateLimit({
-  max: 100,
-  windowMs: 60 * 60 * 100000,
-  message: 'Too many requests from this Ip, Please try again in an hour.',
-});
+// const limiter = rateLimit({
+//   max: 100,
+//   windowMs: 60 * 60 * 100000,
+//   message: 'Too many requests from this Ip, Please try again in an hour.',
+// });
+
 app.use(cors());
-app.use('/api', limiter);
+// app.use('/api', limiter);
 
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));

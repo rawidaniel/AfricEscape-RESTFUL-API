@@ -34,6 +34,7 @@ reviewSchema.pre(/^find/, function (next) {
     path: 'tour',
     select: 'name imageCover -guides',
   });
+  // comment
   next();
 });
 

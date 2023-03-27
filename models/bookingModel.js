@@ -33,6 +33,8 @@ bookingSchema.pre(/^find/, function (next) {
   next();
 });
 
+bookingSchema.index({ user: 1, tour: 1 }, { unique: true });
+
 const Booking = mongoose.model('Booking', bookingSchema);
 
 module.exports = Booking;

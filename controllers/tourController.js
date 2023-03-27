@@ -5,6 +5,7 @@ const Tour = require('../models/tourModel');
 const catchAsync = require('../utils/catchAsync');
 const factory = require('./handlerFactory');
 const AppError = require('../utils/appError');
+const ApiFeature = require('../utils/apiFeatures');
 
 const multerStorage = multer.memoryStorage();
 
@@ -177,5 +178,27 @@ exports.getDistances = catchAsync(async (req, res, next) => {
   res.status(200).json({
     status: 'success',
     data: { data: distances },
+  });
+});
+
+exports.getSerachedTour = catchAsync(async (req, res, next) => {
+  const feature = new ApiFeature(
+    Tour.find({
+      name: { $regex: `${req.params.name}`, $options: 'i' },
+    }),
+    req.query
+  )
+    .filter()
+    .sort()
+    .limitFields()
+    .paginate();
+
+  const doc = await feature.query;
+  res.status(200).json({
+    status: 'Success',
+    results: doc.length,
+    data: {
+      data: doc,
+    },
   });
 });

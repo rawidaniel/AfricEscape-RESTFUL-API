@@ -13,6 +13,12 @@ router.post(
   bookingController.createMyBooking
 );
 
+router
+  .route('/:id')
+  .delete(
+    authController.restrictTo('admin', 'lead-guide', 'user'),
+    bookingController.deleteBooking
+  );
 router.use(authController.restrictTo('admin', 'lead-guide'));
 
 router
@@ -23,7 +29,6 @@ router
 router
   .route('/:id')
   .get(bookingController.getBooking)
-  .patch(bookingController.updateBooking)
-  .delete(bookingController.deleteBooking);
+  .patch(bookingController.updateBooking);
 
 module.exports = router;

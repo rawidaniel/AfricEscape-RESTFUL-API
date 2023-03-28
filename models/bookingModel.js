@@ -25,6 +25,9 @@ const bookingSchema = mongoose.Schema({
   },
 });
 
+bookingSchema.index({ price: 1 });
+// bookingSchema.index({ user: 1 });
+// bookingSchema.index({ tour: 1 });
 bookingSchema.index({ user: 1, tour: 1 }, { unique: true });
 
 bookingSchema.pre(/^find/, function (next) {

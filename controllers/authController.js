@@ -56,7 +56,7 @@ exports.signup = catchAsync(async (req, res, next) => {
   });
 
   // const url = `${req.protocol}://${req.get('host')}/profile`;
-  const url = 'https://master--timely-nougat-74a61c.netlify.app/profile';
+  const url = 'https://africescape.onrender.com/profile';
   await new Email(newUser, url).sendWelcome();
   createAndSendToken(newUser, 201, res);
 });
